@@ -22,6 +22,11 @@ BINFILE_HARDFP = "Graphics_SDK_setuplinux_hardfp_${SGXPV}.bin"
 MD5SUM_HARDFP = "94acdbd20152c905939c2448d5e80a72"
 SHA256SUM_HARDFP = "7f647bf45a5ce8ba9aaa28c4afe85fced4275f9a4567a1886d4460b76c9051ae"
 
+RREPLACES_${PN} = "mesa"
+RCONFLICTS_${PN} = "mesa"
+PROVIDES = "virtual/libgl virtual/libgles1 virtual/libgles2 virtual/egl"
+
+
 # For now we only have hardfp version
 python __anonymous() {
     tunes = bb.data.getVar("TUNE_FEATURES", d, 1)
